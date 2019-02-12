@@ -1,10 +1,12 @@
 <template>
   <div class="page1">
+    <!-- <button @click="changeData()">aaaaa</button> -->
     <ul>
       <li
         v-for="(number, index) in numberList"
         :key="index"
-        :ref="`content${index}`">
+        :ref="`content${index}`"
+      >
         <h4>{{ number.title }}</h4>
         <p>{{ number.content }}</p>
       </li>
@@ -13,7 +15,10 @@
       <span
         v-for="(number, index) in numberList"
         :key="index"
-        @click="goContent(index)">{{ number.title }}</span>
+        @click="goContent(index)"
+      >
+        {{ number.title }}
+      </span>
     </div>
   </div>
 </template>
@@ -25,20 +30,20 @@ export default {
     return {
       numberList: [
         {
-          title: '第一章',
-          content: 1111,
+          title: "第一章",
+          content: 1111
         },
         {
-          title: '第二章',
-          content: 2222,
+          title: "第二章",
+          content: 2222
         },
         {
-          title: '第三章',
-          content: 3333,
+          title: "第三章",
+          content: 3333
         },
         {
-          title: '第四章',
-          content: 4444,
+          title: "第四章",
+          content: 4444
         }
       ]
     };
@@ -46,6 +51,12 @@ export default {
   methods: {
     goContent(index) {
       this.$refs[`content${index}`][0].scrollIntoView();
+    },
+    changeData() {
+      this.numberList.push({
+        title: "第五章",
+        content: 5555555555
+      });
     }
   }
 };

@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Page1 from "./views/Page1.vue";
+import charts from "./views/Charts.vue";
 
 Vue.use(Router);
 
@@ -9,9 +9,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/page1",
-      name: "page1",
-      component: Page1
+      path: "/charts",
+      name: "charts",
+      component: charts
     }
   ]
 });

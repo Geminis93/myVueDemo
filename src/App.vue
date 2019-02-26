@@ -2,7 +2,7 @@
   <div id="app">
     <div ref="canvasNest" class="app-bg" />
     <div id="nav">
-      <router-link to="/page1" tag="li">Page1</router-link>
+      <router-link to="/charts" tag="li">图表类</router-link>
       <router-link to="/page2" tag="li">Page2</router-link>
       <router-link to="/page3" tag="li">Page3</router-link>
       <router-link to="/page4" tag="li">Page4</router-link>
@@ -23,7 +23,9 @@ export default {
     };
   },
   mounted() {
-    this.canvasNest = new CanvasNest(this.$refs.canvasNest);
+    this.canvasNest = new CanvasNest(this.$refs.canvasNest, {
+      count: 200
+    });
   },
   destroyed() {
     this.canvasNest.destroy();

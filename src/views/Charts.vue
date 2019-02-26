@@ -1,31 +1,30 @@
 <template>
-  <div class="page1">
-    <!-- <button @click="changeData()">aaaaa</button> -->
-    <ul>
-      <li
-        v-for="(number, index) in numberList"
-        :key="index"
-        :ref="`content${index}`"
-      >
-        <h4>{{ number.title }}</h4>
-        <p>{{ number.content }}</p>
-      </li>
-    </ul>
-    <div class="page1-nav">
-      <span
-        v-for="(number, index) in numberList"
-        :key="index"
-        @click="goContent(index)"
-      >
-        {{ number.title }}
-      </span>
-    </div>
+  <div class="charts">
+    <ShowTemplate
+      :titleList="numberList"
+      @on-change-content="goContent">
+      <ul class="charts-content">
+        <li
+          v-for="(number, index) in numberList"
+          :key="index"
+          :ref="`content${index}`"
+        >
+          <h4>{{ number.title }}</h4>
+          <p>{{ number.content }}</p>
+        </li>
+      </ul>
+    </ShowTemplate>
   </div>
 </template>
 
 <script>
+import ShowTemplate from '../components/showTemplate';
+
 export default {
-  name: "page1",
+  name: "charts",
+  components: {
+    ShowTemplate,
+  },
   data() {
     return {
       numberList: [
@@ -63,5 +62,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Page1.scss";
+@import "./Charts.scss";
 </style>

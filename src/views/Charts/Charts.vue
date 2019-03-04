@@ -1,8 +1,6 @@
 <template>
   <div class="charts">
-    <ShowTemplate
-      :titleList="numberList"
-      @on-change-content="goContent">
+    <ShowTemplate :titleList="numberList" @on-change-content="goContent">
       <ul class="charts-content">
         <li
           v-for="(number, index) in numberList"
@@ -11,6 +9,7 @@
         >
           <h4>{{ number.title }}</h4>
           <p>{{ number.content }}</p>
+          <CommonChart />
         </li>
       </ul>
     </ShowTemplate>
@@ -18,12 +17,14 @@
 </template>
 
 <script>
-import ShowTemplate from '../components/showTemplate';
+import ShowTemplate from "../../components/showTemplate";
+import CommonChart from '../../components/charts';
 
 export default {
   name: "charts",
   components: {
     ShowTemplate,
+    CommonChart
   },
   data() {
     return {

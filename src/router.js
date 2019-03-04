@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import charts from "./views/Charts.vue";
+import charts from "./views/Charts/Charts.vue";
 
 Vue.use(Router);
 

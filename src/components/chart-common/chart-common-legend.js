@@ -1,7 +1,7 @@
 
 const LEGEND = {
   right: 8,
-  top: 0,
+  top: 8,
   itemWidth: 16,
   itemHeight: 4,
   padding: 0,

@@ -3,10 +3,10 @@
     <div ref="canvasNest" class="app-bg" />
     <div id="nav">
       <router-link to="/charts" tag="li">图表类</router-link>
-      <router-link to="/page2" tag="li">Page1</router-link>
+      <!-- <router-link to="/page2" tag="li">Page1</router-link>
       <router-link to="/page3" tag="li">Page3</router-link>
       <router-link to="/page4" tag="li">Page4</router-link>
-      <router-link to="/page5" tag="li">Page5</router-link>
+      <router-link to="/page5" tag="li">Page5</router-link> -->
     </div>
     <router-view class="app-view" />
   </div>

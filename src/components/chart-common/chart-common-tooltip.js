@@ -42,7 +42,7 @@ const TOOLTIP = {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;">${x.seriesName}</span>
-        <span style="color: ${x.color}; float: right;">${value}</span>
+        <span style="color: ${x.color}; float: right;">${x.value}</span>
       </p>`;
     });
 

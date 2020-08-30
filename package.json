@@ -10,7 +10,7 @@
   "dependencies": {
     "canvas-nest.js": "^2.0.4",
     "echarts": "^4.1.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "vue": "^2.5.22",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

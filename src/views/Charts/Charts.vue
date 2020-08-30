@@ -389,8 +389,25 @@ export default {
     changeData() {
       this.numberList.push({
         title: "第五章",
-        content: 5555555555
-      });
+        content: "柱状图展示，图例溢出隐藏处理",
+        options: {
+          xAxis: {
+            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+          },
+          series: [
+            {
+              name: "销量",
+              type: "bar",
+              data: [5, 20, 36, 10, 10, 20]
+            },
+            {
+              name: "销量1",
+              type: "bar",
+              data: [15, 30, 16, 40, 30, 60]
+            }
+          ]
+        }
+      })
     }
   }
 };

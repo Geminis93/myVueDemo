@@ -31,6 +31,6 @@ const CHART_XAXIS = {
   axisLabel: {
     color: '#80848F',
     fontFamily: 'HelveticaNeue',
-  },
+  }
 };
 export default CHART_XAXIS;

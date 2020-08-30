@@ -1,33 +1,36 @@
 // 默认Y 轴样式
 const CHART_YAXIS = {
-  type: 'value',
+  type: "value",
   splitLine: {
     show: true,
     lineStyle: {
       width: 1,
-      color: '#E9EAEC',
-      type: 'dashed',
-    },
+      color: "#E9EAEC",
+      type: "dashed",
+    }
   },
   splitArea: {
-    show: false,
+    show: false
   },
   axisLine: {
-    show: false,
+    show: false
   },
   axisTick: {
-    show: false,
+    show: false
   },
   axisLabel: {
-    color: '#80848F',
-    fontFamily: 'HelveticaNeue',
+    color: "#80848F",
+    fontFamily: "HelveticaNeue",
     formatter(value) {
       let number = value;
       if (number >= 1000) {
-        number = number % 1000 === 0 ? `${Math.ceil(number / 1000)} k` : `${(number / 1000).toFixed(1)} k`;
+        number =
+          number % 1000 === 0
+            ? `${Math.ceil(number / 1000)} k`
+            : `${(number / 1000).toFixed(1)} k`;
       }
       return number;
     }
-  },
+  }
 };
 export default CHART_YAXIS;

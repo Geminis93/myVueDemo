@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       numberList: [
+        // 柱状图
         {
           title: "柱状图",
           content: "柱状图展示，图例溢出隐藏处理",
@@ -50,6 +51,29 @@ export default {
             ]
           }
         },
+        // 柱状 + 折线图
+        {
+          title: "柱状 + 折线图",
+          content: "柱状 + 折线图展示",
+          options: {
+            xAxis: {
+              data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+            },
+            series: [
+              {
+                name: "销量销量销量销量销量",
+                type: "line",
+                data: [5, 20, 36, 10, 10, 20]
+              },
+              {
+                name: "销量1",
+                type: "bar",
+                data: [15, 30, 16, 40, 30, 60]
+              }
+            ]
+          }
+        },
+        // 折线图
         {
           title: "折线图",
           content: "单条折线图展示",
@@ -64,6 +88,7 @@ export default {
             }
           }
         },
+        // 堆积图
         {
           title: "堆积图",
           content: "堆积图展示",
@@ -89,6 +114,7 @@ export default {
             ]
           }
         },
+        // 仪表盘
         {
           title: "仪表盘",
           content: "24小时仪表盘展示数据",
@@ -386,29 +412,6 @@ export default {
     goContent(index) {
       this.$refs[`content${index}`][0].scrollIntoView();
     },
-    changeData() {
-      this.numberList.push({
-        title: "第五章",
-        content: "柱状图展示，图例溢出隐藏处理",
-        options: {
-          xAxis: {
-            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-          },
-          series: [
-            {
-              name: "销量",
-              type: "bar",
-              data: [5, 20, 36, 10, 10, 20]
-            },
-            {
-              name: "销量1",
-              type: "bar",
-              data: [15, 30, 16, 40, 30, 60]
-            }
-          ]
-        }
-      })
-    }
   }
 };
 </script>

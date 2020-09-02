@@ -1,6 +1,8 @@
 <template>
   <div class="show-template">
-    <slot></slot>
+    <div class="show-template-content">
+      <slot></slot>
+    </div>
     <div class="show-template-nav">
       <span
         v-for="(number, index) in titleList"
